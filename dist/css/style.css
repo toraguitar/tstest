@@ -3,6 +3,10 @@
   font-family: "Sawarabi Gothic";
 }
 
+.pokeIntroduce__menu::after {
+  content: '▽';
+}
+
 ul,
 ol {
   color: #668ad8;

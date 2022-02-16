@@ -1,5 +1,10 @@
 .pokeIntroduce {
   font-family: "Sawarabi Gothic";
+  &__menu {
+    &::after {
+      content: '▽';
+    }
+  }
 }
 ul,
 ol {
