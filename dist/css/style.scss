@@ -2,68 +2,53 @@
   margin: 0 10px 0;
   width: 700px;
   font-family: "Hannari";
+  background-image: url(../image/wallpaper_00012.jpeg);
   &__title {
     margin: 16px 0;
     line-height: 3;
-    font-size: 35px;
-    font-family: "Hannari";
+    font-size: 40px;
     color: #ffffff;
     border-radius: 10px;
     background-color: #87cefa;
   }
-  &__phaseTitle {
-    line-height: 3;
-    font-size: 30px;
+  &__menuArea {
+    padding: 8px;
+    line-height: 2;
     font-weight: 700;
+    border-radius: 10px;
+    background-image: url(../image/ogp.jpeg);
+    background-color: rgba(255,255,255, 0.8);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:lighten;
   }
-  &__uibMenu {
-    position: relative;
-    cursor: pointer;
-    &::after {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      top: 15px;
-      left: 55px;
-      width: 10px;
-      height: 10px;
-      border-right: 3px solid #000;
-      border-bottom: 3px solid #000;
-      transform: translateY(-50%) rotate(45deg);
-      transition: 0.3s;
-    }
-    &.is-opened {
-      &::after {
-        transform: rotate(225deg);
-      }
-    }
+  &__menuTitle {
+    font-size: 28px;
+  }
+  &__menuList {
+    color: #668ad8;
+    list-style: inside;
   }
   &__subMenu {
-    color: #668ad8;
+    font-size: 24px;
+  }
+  &__subMenuTitle {
+    background-color: rgba(255,255,255, 0.8);
     cursor: pointer;
   }
-  &__subMenuText {
-    color: #668ad8; /*文字色*/
-    background: #f1f8ff; /*背景色*/
-    // height: 0;
-    // opacity: 0;
-    // visibility: hidden;
-    transition: 0.3s;
-    &.is-opened40 {
-      height: 32px;
-      opacity: 1;
-      visibility: visible;
+  &__subMenuList {
+    padding: 8px 32px;
+    color: #668ad8;
+    list-style: circle;
+    & > li {
+      font-size: 20px;
     }
-    &.is-opened72 {
-      height: 64px;
-      opacity: 1;
-      visibility: visible;
-    }
-    &.is-opened104 {
-      height: 96px;
-      opacity: 1;
-      visibility: visible;
-    }
+  }
+  &__phaseTitle {
+    line-height: 1.5;
+    margin-top: 24px;
+    font-size: 30px;
+    font-weight: 700;
   }
   &__mapPhoto {
     display: flex;
@@ -72,6 +57,9 @@
   }
   &__photoArea {
     margin-left: 10px;
+  }
+  &__figureText {
+    line-height: 2;
   }
 }
 a {

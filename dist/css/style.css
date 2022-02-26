@@ -3,80 +3,63 @@
   margin: 0 10px 0;
   width: 700px;
   font-family: "Hannari";
+  background-image: url(../image/wallpaper_00012.jpeg);
 }
 
 .pokeIntroduce__title {
   margin: 16px 0;
   line-height: 3;
-  font-size: 35px;
-  font-family: "Hannari";
+  font-size: 40px;
   color: #ffffff;
   border-radius: 10px;
   background-color: #87cefa;
 }
 
-.pokeIntroduce__phaseTitle {
-  line-height: 3;
-  font-size: 30px;
+.pokeIntroduce__menuArea {
+  padding: 8px;
+  line-height: 2;
   font-weight: 700;
+  border-radius: 10px;
+  background-image: url(../image/ogp.jpeg);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: lighten;
 }
 
-.pokeIntroduce__uibMenu {
-  position: relative;
-  cursor: pointer;
+.pokeIntroduce__menuTitle {
+  font-size: 28px;
 }
 
-.pokeIntroduce__uibMenu::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 15px;
-  left: 55px;
-  width: 10px;
-  height: 10px;
-  border-right: 3px solid #000;
-  border-bottom: 3px solid #000;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.pokeIntroduce__uibMenu.is-opened::after {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+.pokeIntroduce__menuList {
+  color: #668ad8;
+  list-style: inside;
 }
 
 .pokeIntroduce__subMenu {
-  color: #668ad8;
+  font-size: 24px;
+}
+
+.pokeIntroduce__subMenuTitle {
+  background-color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 
-.pokeIntroduce__subMenuText {
+.pokeIntroduce__subMenuList {
+  padding: 8px 32px;
   color: #668ad8;
-  /*文字色*/
-  background: #f1f8ff;
-  /*背景色*/
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  list-style: circle;
 }
 
-.pokeIntroduce__subMenuText.is-opened40 {
-  height: 32px;
-  opacity: 1;
-  visibility: visible;
+.pokeIntroduce__subMenuList > li {
+  font-size: 20px;
 }
 
-.pokeIntroduce__subMenuText.is-opened72 {
-  height: 64px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.pokeIntroduce__subMenuText.is-opened104 {
-  height: 96px;
-  opacity: 1;
-  visibility: visible;
+.pokeIntroduce__phaseTitle {
+  line-height: 1.5;
+  margin-top: 24px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .pokeIntroduce__mapPhoto {
@@ -91,6 +74,10 @@
 
 .pokeIntroduce__photoArea {
   margin-left: 10px;
+}
+
+.pokeIntroduce__figureText {
+  line-height: 2;
 }
 
 a {
