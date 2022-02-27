@@ -125,13 +125,17 @@
   margin: 0 auto;
   width: 640px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .pokeIntroduce__carouselArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   height: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .pokeIntroduce__carouselList .pokeIntroduce__photo {
@@ -185,8 +189,8 @@ button {
   height: 48px;
   background-color: rgba(113, 135, 245, 0.8);
   border-radius: 50%;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .arrow-btn:focus {
@@ -236,5 +240,25 @@ button {
   -webkit-transform: translate(-70%, -50%) rotate(135deg);
           transform: translate(-70%, -50%) rotate(135deg);
   cursor: pointer;
+}
+
+.btn-next {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.btn-next.is-hidden {
+  opacity: 0;
+}
+
+.btn-prev {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.btn-prev.is-hidden {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

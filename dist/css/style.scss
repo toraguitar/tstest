@@ -25,10 +25,10 @@
     font-weight: 700;
     border-radius: 10px;
     background-image: url(../image/ogp.jpeg);
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     background-size: cover;
     background-position: center;
-    background-blend-mode:lighten;
+    background-blend-mode: lighten;
   }
   &__menuTitle {
     font-size: 28px;
@@ -41,7 +41,7 @@
     font-size: 24px;
   }
   &__subMenuTitle {
-    background-color: rgba(255,255,255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     cursor: pointer;
   }
   &__subMenuList {
@@ -69,7 +69,7 @@
   &__phaseMidTitle {
     margin-top: 16px;
     line-height: 1.5;
-    font-size:24px;
+    font-size: 24px;
   }
   &__phaseMinTitle {
     line-height: 1.5;
@@ -100,10 +100,13 @@
     margin: 0 auto;
     width: 640px;
     overflow: hidden;
+    white-space: nowrap;
   }
   &__carouselArea {
     display: flex;
+    position: relative;
     height: 100%;
+    transition: 0.4s;
   }
   &__carouselList {
     .pokeIntroduce__photo {
@@ -148,7 +151,7 @@ button {
   height: 48px;
   background-color: rgba(113, 135, 245, 0.8);
   border-radius: 50%;
-  transition: .2s;
+  transition: 0.2s;
   &:focus {
     box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.8);
   }
@@ -169,7 +172,7 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -50%)rotate(-45deg);
+    transform: translate(-30%, -50%) rotate(-45deg);
     cursor: pointer;
   }
 }
@@ -185,7 +188,21 @@ button {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-70%, -50%)rotate(135deg);
+    transform: translate(-70%, -50%) rotate(135deg);
     cursor: pointer;
+  }
+}
+.btn-next {
+  opacity: 1;
+  transition: opacity 0.4s;
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+.btn-prev {
+  opacity: 1;
+  transition: opacity 0.4s;
+  &.is-hidden {
+    opacity: 0;
   }
 }
