@@ -211,6 +211,9 @@ button {
 /* 左 */
 .arrow-left {
   position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 .arrow-left:after {
@@ -227,9 +230,17 @@ button {
   cursor: pointer;
 }
 
+.arrow-left.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* 右 */
 .arrow-right {
   position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 .arrow-right:after {
@@ -246,27 +257,8 @@ button {
   cursor: pointer;
 }
 
-.btn-next {
-  display: block;
-  opacity: 1;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.btn-next.is-hidden {
-  display: none;
+.arrow-right.is-hidden {
   opacity: 0;
-}
-
-.btn-prev {
-  display: block;
-  opacity: 1;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.btn-prev.is-hidden {
-  display: none;
-  opacity: 0;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */

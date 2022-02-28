@@ -166,6 +166,8 @@ button {
 /* 左 */
 .arrow-left {
   position: relative;
+  opacity: 1;
+  transition: opacity 0.4s;
   &:after {
     content: "";
     width: 10px;
@@ -178,10 +180,16 @@ button {
     transform: translate(-30%, -50%) rotate(-45deg);
     cursor: pointer;
   }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 /* 右 */
 .arrow-right {
   position: relative;
+  opacity: 1;
+  transition: opacity 0.4s;
   &:after {
     content: "";
     width: 10px;
@@ -194,22 +202,8 @@ button {
     transform: translate(-70%, -50%) rotate(135deg);
     cursor: pointer;
   }
-}
-.btn-next {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.4s;
   &.is-hidden {
-    display: none;
     opacity: 0;
-  }
-}
-.btn-prev {
-  display: block;
-  opacity: 1;
-  transition: opacity 0.4s;
-  &.is-hidden {
-    display: none;
-    opacity: 0;
+    pointer-events: none;
   }
 }
