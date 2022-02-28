@@ -61,23 +61,27 @@
     background-blend-mode: lighten;
   }
   &__phaseTitle {
-    margin-top: 32px;
+    margin-top: 36px;
     line-height: 1.5;
     font-size: 36px;
     font-weight: 700;
   }
   &__phaseMidTitle {
-    margin-top: 28px;
+    margin-top: 64px;
+    padding-top: 16px;
     line-height: 1.5;
     font-size: 28px;
+    border-top: 1px solid rgb(192, 192, 192);
   }
   &__phaseMinArea {
+    margin-top: 20px;
     background-color: rgba(226, 226, 226, 0.9);
   }
   &__phaseMinTitle {
     line-height: 1.5;
-    margin-top: 20px;
+    padding: 20px 0 12px;
     font-size: 20px;
+    font-weight: 700;
   }
   &__photo {
     margin: 8px 0;
@@ -100,7 +104,7 @@
     line-height: 2;
   }
   &__carousel {
-    margin: 0 auto;
+    margin: 24px auto 0;
     width: 640px;
     overflow: hidden;
     white-space: nowrap;
@@ -113,10 +117,14 @@
   }
   &__carouselList {
     .pokeIntroduce__photo {
-      margin-right: 30px;
+      margin: 0 8px 0;
       width: 640px;
       height: 360px;
     }
+  }
+  &__carouselText {
+    padding: 8px;
+    text-align: center;
   }
 }
 a {
@@ -142,6 +150,7 @@ button {
 /*********** スライド送りボタン ***********/
 /* 共有パーツ */
 .arrow-wrap {
+  padding: 4px 0;
   width: 90%;
   height: 100%;
   margin: 0 auto;
