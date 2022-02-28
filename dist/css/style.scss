@@ -67,9 +67,12 @@
     font-weight: 700;
   }
   &__phaseMidTitle {
-    margin-top: 16px;
+    margin-top: 28px;
     line-height: 1.5;
-    font-size: 24px;
+    font-size: 28px;
+  }
+  &__phaseMinArea {
+    background-color: rgba(226, 226, 226, 0.9);
   }
   &__phaseMinTitle {
     line-height: 1.5;
@@ -193,16 +196,20 @@ button {
   }
 }
 .btn-next {
+  display: block;
   opacity: 1;
   transition: opacity 0.4s;
   &.is-hidden {
+    display: none;
     opacity: 0;
   }
 }
 .btn-prev {
+  display: block;
   opacity: 1;
   transition: opacity 0.4s;
   &.is-hidden {
+    display: none;
     opacity: 0;
   }
 }
