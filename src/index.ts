@@ -1,5 +1,6 @@
 let currentSlide = 0;
 const hiddenClass = 'is-hidden';
+const fadeInClass = 'is-fadeIn';
 
 const smoothScroll = (): void => {
     const triggerTitleList = document.querySelectorAll('[data-smooth-scroll-trigger]');
@@ -69,6 +70,28 @@ const setClickButtonNext = (): void => {
         controlButton();
     })
 };
+const fadeInSectionArea = (): void => {
+    const sectionTitles = document.querySelectorAll('[data-fade-trigger]');
+    const sectionOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1
+    };
+    const sectionCallback = (entries: any) => {
+        for (let i = 0; i < entries.length; i++) {
+            const entry = entries[i];
+            if (entry.isIntersecting) {
+                const triggerData = entry.target.getAttribute('data-fade-trigger');
+                const targetSection = document.querySelector(`[data-fade-target="${triggerData}"]`);
+                targetSection?.classList.add(fadeInClass);
+            }
+        }
+    };
+    const sectionObserver = new IntersectionObserver(sectionCallback, sectionOptions);
+    for (let i = 0; i < sectionTitles.length; i++) {
+        sectionObserver.observe(sectionTitles[i]);
+    }
+};
 
 window.addEventListener("DOMContentLoaded", () => {
     smoothScroll();
@@ -76,4 +99,5 @@ window.addEventListener("DOMContentLoaded", () => {
     setClickButtonPrev();
     setClickButtonNext();
     controlButton();
+    fadeInSectionArea();
 });

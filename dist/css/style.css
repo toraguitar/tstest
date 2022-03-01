@@ -24,7 +24,7 @@
 }
 
 .pokeIntroduce__menuArea {
-  padding: 8px;
+  padding: 24px 8px;
   width: 960px;
   line-height: 2;
   font-weight: 700;
@@ -37,7 +37,7 @@
 }
 
 .pokeIntroduce__menuTitle {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .pokeIntroduce__menuList {
@@ -66,11 +66,18 @@
 
 .pokeIntroduce__sectionArea {
   margin-top: 64px;
-  padding: 8px;
+  padding: 8px 16px;
   width: 960px;
   border-radius: 20px;
   background-color: rgba(241, 241, 241, 0.9);
   background-blend-mode: lighten;
+  opacity: 0;
+  -webkit-transition: opacity 1.5s;
+  transition: opacity 1.5s;
+}
+
+.pokeIntroduce__sectionArea.is-fadeIn {
+  opacity: 1;
 }
 
 .pokeIntroduce__phaseTitle {
@@ -85,11 +92,14 @@
   padding-top: 16px;
   line-height: 1.5;
   font-size: 28px;
+  font-weight: 700;
   border-top: 1px solid silver;
 }
 
 .pokeIntroduce__phaseMinArea {
   margin-top: 20px;
+  padding: 0 4px;
+  border-radius: 4px;
   background-color: rgba(226, 226, 226, 0.9);
 }
 
@@ -117,16 +127,16 @@
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin-left: -10px;
+  margin-left: -8px;
 }
 
 .pokeIntroduce__photoList {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .pokeIntroduce__figureText {
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
 }
 
 .pokeIntroduce__carousel {
