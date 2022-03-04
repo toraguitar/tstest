@@ -31,7 +31,6 @@ const setCarouselWidth = (): void => {
 };
 
 const changeSlide = (index: number) => {
-    const carouselSlides = document.querySelectorAll('.pokeIntroduce__carouselList');
     const carouselSlideArea: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselArea');
     const carouselSlide: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselList');
     const slideWidth = carouselSlide!.offsetWidth;
@@ -77,7 +76,7 @@ const fadeInSectionArea = (): void => {
         rootMargin: '0px',
         threshold: 1
     };
-    const sectionCallback = (entries: any) => {
+    const sectionCallback = (entries: string | any[]) => {
         for (let i = 0; i < entries.length; i++) {
             const entry = entries[i];
             if (entry.isIntersecting) {
