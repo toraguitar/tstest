@@ -74,7 +74,7 @@ const fadeInSectionArea = (): void => {
     const sectionOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 1
+        threshold: 0
     };
     const sectionCallback = (entries: string | any[]) => {
         for (let i = 0; i < entries.length; i++) {
