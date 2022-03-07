@@ -153,7 +153,7 @@
 
 .pokeIntroduce__carousel {
   margin: 24px auto 0;
-  width: 640px;
+  width: 840px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -170,8 +170,7 @@
 
 .pokeIntroduce__carouselList .pokeIntroduce__photo {
   margin: 0 8px 0;
-  width: 640px;
-  height: 360px;
+  width: 840px;
 }
 
 .pokeIntroduce__carouselText {
