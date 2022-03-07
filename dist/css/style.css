@@ -120,6 +120,18 @@
   font-size: 20px;
 }
 
+.pokeIntroduce__descText.-strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.pokeIntroduce__onePointText {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 28px;
+}
+
 .pokeIntroduce__mapPhotoArea {
   display: -webkit-box;
   display: -ms-flexbox;
