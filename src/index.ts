@@ -21,36 +21,39 @@ const smoothScroll = (): void => {
     }
 };
 const setCarouselWidth = (): void => {
-    const carouselSlide: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselList');
+    const carouselSlide = document.querySelector<HTMLElement>('.pokeIntroduce__carouselList');
     const carouselSlides = document.querySelectorAll('.pokeIntroduce__carouselList');
+    const carouselSlideArea = document.querySelector<HTMLElement>('.pokeIntroduce__carouselArea');
+    if (carouselSlide === null || carouselSlides.length === 0 || carouselSlideArea === null) return;
     const slideLength = carouselSlides.length;
-    const slideWidth = carouselSlide!.offsetWidth;
+    const slideWidth = carouselSlide.offsetWidth;
     const slideAreaWidth = slideWidth * slideLength;
-    const carouselSlideArea: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselArea');
-    carouselSlideArea!.style.width = `${slideAreaWidth}px`;
+    carouselSlideArea.style.width = `${slideAreaWidth}px`;
 };
 
 const changeSlide = (index: number) => {
-    const carouselSlideArea: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselArea');
-    const carouselSlide: HTMLElement | null = document.querySelector('.pokeIntroduce__carouselList');
-    const slideWidth = carouselSlide!.offsetWidth;
-    carouselSlideArea!.style.transform = `translateX(-${slideWidth * index}px)`;
+    const carouselSlideArea = document.querySelector<HTMLElement>('.pokeIntroduce__carouselArea');
+    const carouselSlide = document.querySelector<HTMLElement>('.pokeIntroduce__carouselList');
+    if (carouselSlide === null || carouselSlideArea === null) return;
+    const slideWidth = carouselSlide.offsetWidth;
+    carouselSlideArea.style.transform = `translateX(-${slideWidth * index}px)`;
     currentSlide = index;
 };
 const controlButton = (): void => {
     const carouselSlides = document.querySelectorAll('.pokeIntroduce__carouselList');
     const carouselButtonPrev = document.querySelector('[data-slide-carousel="prev"]');
     const carouselButtonNext = document.querySelector('[data-slide-carousel="next"]');
+    if (carouselSlides.length === 0 || carouselButtonPrev === null || carouselButtonNext === null) return;
     const slideLength = carouselSlides.length;
     if (slideLength - 1 === currentSlide) {
-        carouselButtonNext!.classList.add(hiddenClass);
+        carouselButtonNext.classList.add(hiddenClass);
     } else if (currentSlide < slideLength) {
-        carouselButtonNext!.classList.remove(hiddenClass);
+        carouselButtonNext.classList.remove(hiddenClass);
     }
     if (currentSlide === 0) {
-        carouselButtonPrev!.classList.add(hiddenClass);
+        carouselButtonPrev.classList.add(hiddenClass);
     } else {
-        carouselButtonPrev!.classList.remove(hiddenClass);
+        carouselButtonPrev.classList.remove(hiddenClass);
     }
 };
 const setClickButtonPrev = (): void => {
@@ -76,9 +79,9 @@ const fadeInSectionArea = (): void => {
         rootMargin: '0px',
         threshold: 0
     };
-    const sectionCallback = (entries: string | any[]) => {
+    const sectionCallback = (entries: Array<IntersectionObserverEntry>) => {
         for (let i = 0; i < entries.length; i++) {
-            const entry = entries[i];
+            const entry:IntersectionObserverEntry = entries[i];
             if (entry.isIntersecting) {
                 const triggerData = entry.target.getAttribute('data-fade-trigger');
                 const targetSection = document.querySelector(`[data-fade-target="${triggerData}"]`);
